@@ -1,0 +1,84 @@
+/* style.css - Base layout and terminal-style aesthetics */
+
+:root {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #00ffcc;
+  --muted-color: #888;
+  --font-family: 'Courier New', Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+nav button {
+  background: none;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+nav button:hover {
+  background-color: var(--accent-color);
+  color: #121212;
+}
+
+.splash {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.ascii-art {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--accent-color);
+  white-space: pre;
+  overflow-x: auto;
+}
+
+main {
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted-color);
+  background-color: #1e1e1e;
+  border-top: 1px solid var(--muted-color);
+}

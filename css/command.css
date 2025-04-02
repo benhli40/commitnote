@@ -1,0 +1,111 @@
+/* style.css - Base layout and terminal-style aesthetics */
+
+:root {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #00ffcc;
+  --muted-color: #888;
+  --font-family: 'Courier New', Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+nav button {
+  background: none;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+nav button:hover {
+  background-color: var(--accent-color);
+  color: #121212;
+}
+
+main {
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted-color);
+  background-color: #1e1e1e;
+  border-top: 1px solid var(--muted-color);
+  position: relative;
+}
+
+.command-bar {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#command-input {
+  width: 90%;
+  max-width: 600px;
+  padding: 0.5rem;
+  background-color: #0f0f0f;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  border-radius: 4px;
+  outline: none;
+}
+
+#command-input:focus {
+  border-color: #00ffff;
+  background-color: #181818;
+}
+
+#command-output {
+  margin-top: 0.5rem;
+  width: 90%;
+  max-width: 600px;
+  background-color: #181818;
+  padding: 0.75rem;
+  color: var(--text-color);
+  font-size: 0.85rem;
+  border-left: 4px solid var(--accent-color);
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 4px;
+  min-height: 2em;
+}

@@ -1,0 +1,26 @@
+
+
+
+.diff-line {
+  padding: 2px 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-left: 4px solid transparent;
+}
+
+.diff-line.neutral {
+  color: var(--text-color);
+  background-color: #1e1e1e;
+}
+
+.diff-line.added {
+  color: #b6fcb6;
+  background-color: #112b11;
+  border-left-color: #00cc66;
+}
+
+.diff-line.removed {
+  color: #ffb6ba;
+  background-color: #2b1111;
+  border-left-color: #ff4e6a;
+}
